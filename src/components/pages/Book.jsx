@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate, useParams } from "react-router-dom"
+import { useLoaderData, useNavigate, useParams, Outlet, Link } from "react-router-dom";
 
 export const Book = () => {
     const { bookId } = useParams();
@@ -13,6 +13,9 @@ export const Book = () => {
             <h1>{title} - {author}</h1>
             <p>{description}</p>
             <p>{rating}</p>
+
+            <Link to={`/books/${bookId}/author`}>Про автора</Link>
+            <Outlet/>
         </div>
     )
 }

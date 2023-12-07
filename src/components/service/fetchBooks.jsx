@@ -20,3 +20,5 @@ export const fetchBooksById = async ({params}) => {
         console.log(error);
     }
 }
+
+export const fetchBooksAuthor = async () => {}
